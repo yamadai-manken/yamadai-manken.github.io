@@ -49,6 +49,9 @@ jobs:
     # これを回避するために.nojekyllファイルをoutディレクトリに作る
     - name: add nojekyll
       run: touch ./out/.nojekyll
+    
+    - name: change _next path
+      run: python3 change-_nextpath.py
 
     # gh-pagesブランチにoutディレクトリの中身をプッシュする
     # gh-pagesブランチは自動的に作成される
